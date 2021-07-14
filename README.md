@@ -30,3 +30,4 @@ Obtaining Help
 --------------
 
 Additional help is available through the http://ask.electric-cloud.com forum.
+"# jobDashboard" 
