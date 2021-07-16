@@ -71,7 +71,7 @@
     </ui:style>
 
 <g:VerticalPanel width="100%">
-	<g:HorizontalPanel width="100%">
+	<g:HorizontalPanel visible="true" width="100%">
         <g:cell horizontalAlignment="ALIGN_LEFT">
             <g:Label ui:field="dashboardTitle" styleName="{style.h2}">Jobs Dashboard</g:Label>
         </g:cell>
@@ -83,6 +83,7 @@
         </g:cell>       
 	</g:HorizontalPanel>
     <g:Label ui:field="errorMessage" visible="false" />
-	<g:FlexTable ui:field="dashboardPanel" visible="true" width="100%"/>
+	<g:FlexTable ui:field="dashboardPanel" visible="false" width="100%"/>
+	<g:FlexTable ui:field="dashboardPanel1" visible="true" width="100%"/>
 </g:VerticalPanel>
 </ui:UiBinder>
