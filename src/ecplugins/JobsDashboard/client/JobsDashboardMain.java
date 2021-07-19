@@ -135,23 +135,22 @@ public class JobsDashboardMain extends ComponentBase {
 
 		return mainLaunch;
 	}
-
+	
 	protected void refreshCounter(final int refreshRate) {
 		Timer t = new Timer() {
 			int countDown = refreshRate;
-
+			
 			public void run() {
 				refreshLink.setText(("Refreshing in: " + countDown + " seconds"));
 				countDown = countDown - 1;
 				if (countDown == 0) {
 					countDown = refreshRate;
-					//dashboardPanel1.removeAllRows();																//temp
 					processPropertySheetOnRefresh();
+					dashboardPanel1.removeAllRows();																//temp
 				}
 			}
 		};
-
-		t.scheduleRepeating(1000);
+			t.scheduleRepeating(1000);
 	}
 
 	private void populateTableRow(final String projectName, final String procedureName, final Label lblField,
@@ -268,9 +267,9 @@ public class JobsDashboardMain extends ComponentBase {
 					String htmlStr = "";
 					htmlStr += "<table border='1' style='width:100%'><tr height='100px'>";
 					htmlStr += "<td style='background-color:"+bgColor+";width:20%'>";
-					htmlStr += "<p style='color:white;font-size:20px;'>"+projectName+"</p>";
+					htmlStr += "<p style='color:white;font-size:20px;padding-left:10px;'>"+projectName+"</p>";
 					htmlStr += "<p style='color:white;font-size:50px;text-align:center;''>"+procedureName+"</p>";
-					htmlStr += "<p style='color:white;font-size:20px;text-align:right;'>"+elapsedTime+"sec</p>";
+					htmlStr += "<p style='color:white;font-size:20px;text-align:right;padding-right:10px;'>"+elapsedTime+"sec</p>";
 					htmlStr += "</td></tr></table>";
 					html0.setHTML(htmlStr);
 //					html0.setHTML("<table border='1' style='width:100%'><tr><td style='background-color:yellow'>"+projectName+"</td></tr></table>");
