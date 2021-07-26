@@ -16,7 +16,6 @@
         .procedureHeader{
             width: 30ex;
         }
-
         .historyHeader{
             width: 40ex;
         }
@@ -26,6 +25,33 @@
         }
         .descriptionHeader{
             width: 60ex;
+        }
+        .procedureFont{
+        	color: #FFFFFF;
+        }
+        @external defaultRow;
+        .defaultRow{
+        	height: 15ex;
+        }
+        @external successRow;
+        .successRow{
+	        height: 15ex;
+        	background: #00D24E;
+        }
+        @external errorRow;
+        .errorRow{
+        	height: 15ex;
+        	background: #FF3232;
+        }
+        @external warningRow;
+        .warningRow{
+        	height: 15ex;
+        	background: #FFA500;
+        }
+         @external cusorRow;
+        .cusorRow{
+        	color: #FFFFFF;
+        	cursor: pointer;
         }
         .vPanel>tbody>tr>td {
             color: #333333;
@@ -43,10 +69,12 @@
         }
         @external evenRow;
         .evenRow {
+        	height: 15ex;
             background: #DEDEE4;
         }
         @external oddRow;
         .oddRow {
+        	height: 15ex;
             background: #F1F1F4;
         }
         @external h2;
@@ -71,7 +99,7 @@
     </ui:style>
 
 <g:VerticalPanel width="100%">
-	<g:HorizontalPanel visible="true" width="100%">
+	<g:HorizontalPanel width="100%">
         <g:cell horizontalAlignment="ALIGN_LEFT">
             <g:Label ui:field="dashboardTitle" styleName="{style.h2}">Jobs Dashboard</g:Label>
         </g:cell>
@@ -83,7 +111,7 @@
         </g:cell>       
 	</g:HorizontalPanel>
     <g:Label ui:field="errorMessage" visible="false" />
-	<g:FlexTable ui:field="dashboardPanel" visible="false" width="100%"/>
-	<g:FlexTable ui:field="dashboardPanel1" visible="true" width="100%"/>
+	<g:FlexTable ui:field="dashboardPanel" visible="true" width="100%"/>
+	<g:FlexTable ui:field="testPanel" visible="true" width="100%"/>
 </g:VerticalPanel>
 </ui:UiBinder>
